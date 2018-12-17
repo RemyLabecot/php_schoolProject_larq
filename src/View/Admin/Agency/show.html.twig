@@ -1,0 +1,39 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <h1>Agences {{ agency.agency }}</h1>
+    <div class="container">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row">Ville:</th>
+                    <td>{{ agency.agency }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Adresse:</th>
+                    <td>{{ agency.address }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Code postal:</th>
+                    <td>{{ agency.zipcode }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Email:</th>
+                    <td>{{ agency.email }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Login:</th>
+                    <td>{{ agency.login }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+        <div class="row d-flex justify-content-around">
+            <a class="col-1 btn button-admin" href="/admin/agency/edit/{{ agency.id }}">Editer</a>
+            <a class="col-1 btn button-admin" href="/admin/agency/delete/{{ agency.id }}">Supprimer</a>
+            <a class="col-1 btn button-admin" href="/admin/agencies">Retour</a>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+{% block content %}
+    <div class="container">
+        <h1>Voyages</h1>
+        <table class="table table-admin table-hover">
+            <thead class="table-admin">
+            <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Durée</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for travel in travels %}
+                <tr onclick="document.location='/admin/travel/{{ travel.id }}';">
+                    <td scope="row">{{ travel.title }}</td>
+                    <td>{{ travel.duration }} </td>
+                    <td>{{ travel.price }}</td>
+                    <td>{{ travel.description }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <button type="button" onclick="document.location='/admin/travel/add';" class="btn button-admin btn-block">Ajouter un voyage</button>
+    </div>
+{% endblock %}

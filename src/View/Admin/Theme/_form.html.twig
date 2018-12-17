@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{ theme.id }}" name="id">
+                <div class="form-group">
+                    <label>Nom du thème</label>
+                    <input type="text" name="theme" class="form-control" placeholder="Nom du thème"
+                           value="{{ theme.theme }}">
+                    <small id="error" class="form-text text-muted">{% for error in errors %}
+                            {{ error }}
+                        {% endfor %}</small>
+                </div>
+                <div class="form-group">
+                    <input type="file" name="files[]" multiple="multiple" class="form-control-file" id="InputFile"
+                           aria-describedby="fileHelp">
+                    <small id="fileHelp" class="form-text text-muted">
+                        La taille optimale de l'image doit être de 600x320pixels
+                    </small>
+                </div>
+                <input type="submit" value="Valider">
+            </form>
+            <hr>
+            <div class="row">
+                <div class="offset-11">
+                    <button type="button" class="btn button-admin" onclick="document.location='/admin/themes';">Retour</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

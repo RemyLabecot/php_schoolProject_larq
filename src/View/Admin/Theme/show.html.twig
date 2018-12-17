@@ -1,0 +1,32 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <h1>Theme {{ theme.theme }}</h1>
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <thead class="thead-primary">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">theme</th>
+                    <th scope="col">image</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">{{ theme.id }}</th>
+                    <td>{{ theme.theme }}</td>
+                    <td>{{ theme.image_theme }}</td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class ="row d-flex justify-content-around">
+            <a class="col-1 btn button-admin" href="/admin/theme/edit/{{ theme.id }}">Editer</a>
+            <a class="col-1 btn button-admin" href="/admin/theme/delete/{{ theme.id }}">Supprimer</a>
+            <a class="col-1 btn button-admin" href="/admin/themes">Retour</a>
+        </div>
+    </div>
+{% endblock %}

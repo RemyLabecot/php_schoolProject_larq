@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{ agency.id }}" name="id">
+                <div class="form-group">
+                    <label>Ville</label>
+                    <input class="form-control" type="text" value="{{ agency.agency }}" placeholder="ville"
+                           name="agency">
+                    <small id="error" class="form-text text-muted">{% for error in errors %}
+                            {{ errors.agency }}
+
+                        {% endfor %}</small>
+                </div>
+                <div class="form-group">
+                    <label>Adresse</label>
+                    <input class="form-control" type="text" value="{{ agency.address }}" placeholder="adresse"
+                           name="address" required>
+                </div>
+                <div class="form-group">
+                    <label>Code postal</label>
+                    <input class="form-control" type="text" value="{{ agency.zipcode }}" placeholder="code postal"
+                           name="zipcode">
+                    <small id="error" class="form-text text-muted">{% for error in errors %}
+                            {{ errors.zipcode }}
+                        {% endfor %}</small>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control" type="text" value="{{ agency.email }}" placeholder="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>login</label>
+                    <input class="form-control" type="text" value="{{ agency.login }}" placeholder="login" name="login">
+                    <small id="error" class="form-text text-muted">{% for error in errors %}
+                            {{ errors.login }}
+                        {% endfor %}</small>
+                </div>
+                <div class="form-group">
+                    <label>Mot de passe</label>
+                    <input class="form-control" type="password" value="{{ agency.pwd }}" placeholder="password" name="pwd">
+                </div>
+                <input type="submit" value="Valider">
+            </form>
+            <hr>
+            <div class="row">
+                <div class="offset-11">
+                    <button type="button" class="btn button-admin" onclick="document.location='/admin/agencies';">Retour
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

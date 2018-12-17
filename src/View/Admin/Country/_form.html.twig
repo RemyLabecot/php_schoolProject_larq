@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{ country.id }}" name="id">
+                <div class="form-group">
+                    <label>Nom du pays</label>
+                    <input type="text" name="country" class="form-control" placeholder="Nom du pays"
+                           value="{{ country.country }}">
+                    <small id="error" class="form-text text-muted">{% for error in errors %}
+                        {{ error }}
+                        {% endfor %}</small>
+                </div>
+                <input type="submit" value="Valider">
+            </form>
+            <hr>
+            <div class="row">
+                <div class="offset-11">
+                    <button type="button" class="btn button-admin" onclick="document.location='/admin/countries';">Retour</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

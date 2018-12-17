@@ -1,0 +1,35 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <h1>Voyage {{ travel.title }}</h1>
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th scope="row">Titre:</th>
+                        <td>{{ travel.title }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Durée:</th>
+                        <td>{{ travel.duration }} jours</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prix:</th>
+                        <td>{{ travel.price }}€</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Description:</th>
+                        <td>{{ travel.description }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class ="row d-flex justify-content-around">
+            <a class="col-1 btn button-admin" href="/admin/travel/edit/{{ travel.id }}">Editer</a>
+            <a class="col-1 btn button-admin" href="/admin/travel/delete/{{ travel.id }}">Supprimer</a>
+            <a class="col-1 btn button-admin" href="/admin/travels">Retour</a>
+        </div>
+    </div>
+{% endblock %}

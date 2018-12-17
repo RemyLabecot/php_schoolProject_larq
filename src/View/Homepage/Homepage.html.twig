@@ -1,0 +1,16 @@
+{% extends "layout.html.twig" %}
+{% block title %}Wexy Travel{% endblock %}
+
+{% block content %}
+    {% include "Homepage/Carousel.html.twig" %}
+    {% include "Homepage/_presentation.html.twig" %}
+    {% include "Theme/themes.html.twig" %}
+    {% include "Homepage/_destinations.html.twig" %}
+    {% include "Homepage/_topSelection.html.twig" %}
+    {% include "Homepage/_deals.html.twig" %}
+    {% include "ShowAgency/ShowAgency.html.twig" %}
+    {% include "Homepage/_wexy.html.twig" %}
+    <a href="/">
+        <i id="top-button" class="fas fa-caret-up fa-3x" style="display: block;"></i>
+    </a>
+{% endblock %}

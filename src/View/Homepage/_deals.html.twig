@@ -1,0 +1,32 @@
+<div id="deals" class="container padd">
+    <div class="row">
+        <div class="col text-center">
+            <h3><strong>Bons plans</strong></h3>
+        </div>
+    </div>
+    <div class="row padd">
+        {% for deal in deals %}
+            <div class="col-lg-4">
+                <div class="card ovl mb-3 select" style="background-color: rgb(244, 246, 247);">
+                    <img class="card-img rounded-0" src="assets/images/{{ deal.image_travel }}" alt="Card image">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col"><h4 class="text-center">{{ deal.title }}</h4>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row align-items-top">
+                            <div class="col">
+                                <p><i>Prix initial : </i><span class="linethrough">{{ deal.price }} </span>€<br>
+                                    <i>Remise : </i>{{ deal.deal }}% !</p>
+                            </div>
+                            <div class="col text-right">
+                                <h2>{{ (deal.price*(100-deal.deal)/100)|round(0, 'floor') }} €</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

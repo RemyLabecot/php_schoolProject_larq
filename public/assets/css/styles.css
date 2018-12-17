@@ -1,0 +1,251 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h5 {
+    text-shadow: 0px 0px 20px #333333;
+}
+.padd {
+    padding-top: 4%;
+}
+a {
+    color:lightgrey !important;
+}
+a:hover {
+    color:#E88D0C !important;
+    text-decoration: none !important;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+div{
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+#presentation{
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+#presentation i{
+    color: #E88D0C;
+}
+
+#presentation p{
+    width: 70%;
+    text-align: center;
+    padding-top: 1%;
+}
+.ovl {
+    border: 0px;
+    transition: transform .2s;
+}
+.ovl:hover{
+    -ms-transform: scale(0.98); /* IE 9 */
+    -webkit-transform: scale(0.98); /* Safari 3-8 */
+    transform: scale(0.98);
+}
+
+.button-wexy {
+    background-color: #002f4a;
+    color: white;
+    margin-bottom: 5%;
+}
+
+#deals, #destination, #selection, #wexy, #destination, #themes{
+    padding-bottom: 5%;
+}
+.linethrough {
+    text-decoration: line-through;
+}
+
+/*navbar */
+
+nav{
+    background-color: #002f4a;
+    margin: 0;
+    border-bottom: 5px solid #E88D0C;
+}
+
+nav a{
+    color: white;
+}
+
+nav a:hover{
+    color: #E88D0C;
+}
+
+nav i{
+    padding: 10px;
+}
+
+nav li{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.navbar .navbar-collapse{
+    text-align: center;
+}
+
+/* form */
+.form-container{
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+/* carousel */
+.carousel{
+    z-index: -99;
+}
+.carousel-item img {
+    max-height: 800px;
+}
+
+#motto{
+    position: absolute;
+    margin-top: -10%;
+    margin-left: 55%;
+    font-family: 'Charmonman', cursive;
+    text-transform: lowercase;
+    color: white;
+    font-size: 100px;
+    text-shadow: black 5px 5px 5px;
+}
+
+/* body */
+#selection {
+    background: url("../images/city-wallpaper-11.jpg") no-repeat;
+    border-bottom: 5px solid #E88D0C;
+}
+
+#themes{
+    background-color: lightgrey;
+    border-top: 5px solid #E88D0C;
+}
+
+/* footer */
+a {
+    color:lightgrey !important;
+}
+a:hover {
+    color: #E88D0C !important;
+    text-decoration: none !important;
+}
+
+/* cards */
+
+.select {
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    justify-content: space-between;
+    height: 95%;
+}
+
+/* footer */
+
+.footer-container {
+    padding-top: 4%;
+    padding-bottom: 2%;
+    font-size: 13px;
+}
+.page-footer {
+    background-color: #002f4a;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    font-size: 13px;
+}
+.text-footer {
+    color:grey;
+}
+.copyright {
+    font-size: 12px;
+    color: grey;
+}
+ul {
+    list-style: none;
+    text-align: left;
+    line-height: 40px;
+}
+.container-thematiques {
+    justify-content: center;
+}
+footer {
+    margin-right: 0;
+    margin-left: 0;
+}
+ul {
+    list-style: none;
+    text-align: left;
+    line-height: 30px;
+    padding: 0px;
+}
+
+#news-btn{
+    color: #E88D0C;
+    border: 1px solid #E88D0C;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    ul {
+        text-align: center;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    #motto{
+        display: none;
+    }
+}
+
+#top-button {
+    color: #002f4a;
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: fixed;
+    bottom: 0.3rem;
+    right: 0.3rem;
+    z-index: 300;
+    cursor: pointer;
+}
+
+/* login */
+.profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.login {
+    margin-top : 11.6%;
+    margin-bottom : 12%;
+}
+
+/* showTravel */
+
+#travelCard{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #E88D0C;
+    color: #002f4a;
+}
+
+.travelCardText{
+    font-size: 23px;
+}
+
+.borderTravel:hover {
+    box-shadow: 3px 3px 8px #aaa;
+}

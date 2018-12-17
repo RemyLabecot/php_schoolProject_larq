@@ -1,0 +1,31 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Les Agences Wexy</h1>
+        <table class="table table-admin table-hover">
+            <thead class="thead table-admin">
+            <tr>
+                <th scope="col">Ville</th>
+                <th scope="col">Adresse</th>
+                <th scope="col">Code postal</th>
+                <th scope="col">Email</th>
+                <th scope="col">Login</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for agency in agencies %}
+            <tr onclick="document.location='/admin/agency/{{ agency.id }}';">
+                <td>{{ agency.agency }}</td>
+                <td>{{ agency.address }}</td>
+                <td>{{ agency.zipcode }}</td>
+                <td>{{ agency.email }}</td>
+                <td>{{ agency.login }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <button type="button" onclick="document.location='/admin/agency/add';" class="btn button-admin btn-block">Ajouter une agence</button>
+    </div>
+{% endblock %}
+

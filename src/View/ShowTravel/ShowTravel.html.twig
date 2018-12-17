@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ travel.title }}{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+       <div class="row">
+           <div class="col-12 col-lg-5 rounded mx-auto d-block">
+                <div id="travelCard" class="card mx-auto">
+                    <img class="card-img-top" src="/assets/images/{{ travel.image_travel }}" alt="Card image cap">
+                    <div class="card-body row">
+                        <div class="col-12 text-center">
+                            <h4 class="card-title">{{ travel.title }}</h4>
+                            <hr style="background-color:#002f4a">
+                        </div>
+                    </div>
+                    <div class="card-body row" style="padding-top: 0;">
+                        <div class="col-lg-7 col-12 text-justify">
+                            <p class="card-text">{{ travel.description }}</p>
+                        </div>
+                        <div class="col-lg-5 col-12 text-center">
+                            <p><strong>Durée : {{ travel.duration }} jours</strong></p>
+                            <p><strong>Prix : {{ travel.price }}€</strong></p>
+                            <a href="/contact" class="btn button-wexy">Je prends rendez-vous</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

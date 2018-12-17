@@ -1,0 +1,29 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <h1>Pays {{ pays.pays }}</h1>
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <thead class="thead-primary table-admin">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Pays</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">{{ country.id }}</th>
+                    <td>{{ country.country }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class ="row d-flex justify-content-around">
+            <a class="col-1 btn button-admin" href="/admin/country/edit/{{ country.id }}">Editer</a>
+            <a class="col-1 btn button-admin" href="/admin/country/delete/{{ country.id }}">Supprimer</a>
+            <a class="col-1 btn button-admin" href="/admin/countries">Retour</a>
+        </div>
+    </div>
+{% endblock %}

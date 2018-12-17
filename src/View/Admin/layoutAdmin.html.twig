@@ -1,0 +1,25 @@
+    <!doctype html>
+    <html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %} Administration Wexy Travel{% endblock %}</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        {% block stylesheet %}
+            <link rel="stylesheet" href="/assets/css/styles_admin.css">
+        {% endblock %}
+
+        <link rel="icon" href="/assets/images/favicon.png">
+    </head>
+    <body>
+{% block navbar %} {% include '/Admin/_navbarAdmin.html.twig' %} {% endblock %}
+{% block content %}{% endblock %}
+{% block javascript %}{%  include "scripts.html.twig" %}{% endblock %}
+</body>
+
+
+</html>

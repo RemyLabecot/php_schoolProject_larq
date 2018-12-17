@@ -1,0 +1,31 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Bons plans</h1>
+        <table class="table table-admin table-hover">
+            <thead class="table-admin">
+            <tr>
+                <th scope="col">Réduction</th>
+                <th scope="col"> </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for deal in deals %}
+                <tr onclick="document.location='/admin/deal/edit/{{ deal.id }}';">
+                    <td>{{ deal.deal }} </td>
+                    <td class="text-right"><a class="button-admin" href="/admin/deal/delete/{{ deal.id }}">Supprimer</a></td>
+                </tr>
+            {% else %}
+                <li>Rien à afficher</li>
+            {% endfor %}
+            </tbody>
+        </table>
+        <button type="button" onclick="document.location='/admin/deal/add';" class="btn button-admin btn-block">
+            Ajouter un bon plan
+        </button>
+        <button type="button" onclick="document.location='/admin/deal/associate';" class="btn button-admin btn-block">
+            Associer un voyage
+        </button>
+    </div>
+{% endblock %}

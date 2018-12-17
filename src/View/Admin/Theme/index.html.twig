@@ -1,0 +1,30 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Themes</h1>
+        <table class="table table-admin table-hover">
+            <thead class="table-admin">
+            <tr>
+                <th scope="col">Theme</th>
+                <th scope="col">Image</th>
+                <th scope="col"> </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for theme in themes %}
+                <tr onclick="document.location='/admin/theme/edit/{{ theme.id }}';">
+                    <td>{{ theme.theme }} </td>
+                    <td>{{ theme.image_theme }} </td>
+                    <td class="text-right"><a class="button-admin" href="/admin/theme/delete/{{ theme.id }}">Supprimer</a></td>
+                </tr>
+            {% else %}
+                <li>Rien à afficher</li>
+            {% endfor %}
+            </tbody>
+        </table>
+        <button type="button" onclick="document.location='/admin/theme/add';" class="btn button-admin btn-block">
+            Ajouter un thème
+        </button>
+    </div>
+{% endblock %}

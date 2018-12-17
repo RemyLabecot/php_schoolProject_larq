@@ -1,0 +1,68 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Ajoutez un voyage</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form method="post">
+                    <div class="form-group">
+                        <input type="hidden" value="{{ travel.id }}" name="id" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Titre</label>
+                        <input type="text" value="{{ travel.title }}" name="title" class="form-control">
+                        <small id="error" class="form-text text-muted">{% for error in errors %}
+                                {{ errors.title }}
+
+                            {% endfor %}</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Prix du voyage</label>
+                        <input type="text" value="{{ travel.price }}" name="price" class="form-control">
+                        <small id="error" class="form-text text-muted">{% for error in errors %}
+                                {{ errors.price }}
+
+                            {% endfor %}</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Durée du voyage</label>
+                        <input type="text" value="{{ travel.duration }}" name="duration" class="form-control">
+                        <small id="error" class="form-text text-muted">{% for error in errors %}
+                                {{ errors.duration }}
+
+                            {% endfor %}</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" class="form-control">{{ travel.description }}</textarea>
+                        <small id="error" class="form-text text-muted">{% for error in errors %}
+                                {{ errors.description }}
+
+                            {% endfor %}</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="themeid">Selectionnez un thème</label>
+                        <select name="themeid" class="form-control">
+                            {% for theme in themes %}
+                                <option value="{{ theme.id }}">{{ theme.theme }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <input type="submit" value="Valider">
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="offset-11">
+                <button type="button" class="btn button-admin" onclick="document.location='/admin';">Retour
+                </button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<div id="themes" class="container-fluid">
+    <div class="container  padd">
+        <div class="row" style="padding-bottom:1%">
+            <div class="col">
+                <div class="text-center">
+                    <h3><strong>Nos Thématiques</strong></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters padd">
+            {% for theme in themes %}
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a href="/showTravel/{{ theme.Trid }}">
+                        <div class="card ovl no-border text-white">
+                            <img class="card-img  rounded-0"
+                                 src="assets/images/{{ theme.image_theme }}"
+                                 alt="Card image">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                <h5 class="card-title"><strong>{{ theme.theme }}</strong></h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

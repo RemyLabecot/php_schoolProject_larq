@@ -1,0 +1,73 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+/*navbar */
+nav{
+    background-color: #002f4a;
+    margin: 0;
+}
+nav a{
+    color: lightgrey;
+}
+nav a:hover{
+    color: #E88D0C !important;
+}
+nav i{
+    padding: 10px;
+}
+nav li{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+.navbar .navbar-collapse{
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* form */
+.form-container{
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+/* table admin */
+
+.table-admin{
+    background-color: #002f4a;
+    color: lightgrey;
+}
+.table-admin th{
+    color: white;
+}
+
+.table-admin tbody{
+    opacity: 0.8;
+}
+
+.table-admin tr:hover{
+    color: #E88D0C;
+    cursor: pointer;
+    opacity: 1;
+}
+
+thead{
+    background-color: #002f4a;
+    color: white;
+}
+
+/* button admin */
+.button-admin {
+    background-color: #002f4a;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.button-admin:hover{
+    color: #E88D0C;
+}

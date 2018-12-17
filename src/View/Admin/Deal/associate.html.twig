@@ -1,0 +1,27 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Associer une promotion à un voyage</h1>
+            <form method="post" class="row">
+                <select class="col-12 col-lg-6 form-control" name="travel">
+                    {% for travel in travels %}
+                        <option value="{{ travel.id }}">{{ travel.title }}</option>
+                    {% endfor %}
+                </select>
+                <select class="col-12 col-lg-6 form-control" name="deal">
+                    {% for deal in deals %}
+                        <option value="{{ deal.id }}">{{ deal.deal }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Valider">
+            </form>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="offset-11">
+                <button type="button" class="btn button-admin" onclick="document.location='/admin/deals';">Retour</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends '/Admin/layoutAdmin.html.twig' %}
+
+{% block content %}
+    <h1>Bon plan à {{ deal.deal }} %</h1>
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Bon plan</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">{{ deal.id }}</th>
+                <td>{{ deal.deal }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class ="row">
+        <a class="offset-3 col-1" href="/admin/deal/edit/{{ deal.id }}">Editer</a>
+        <a class="col-1" href="/admin/deal/delete/{{ deal.id }}">Supprimer</a>
+        <a class="col-1" href="/admin/deals">Retour</a>
+    </div>
+{% endblock %}
